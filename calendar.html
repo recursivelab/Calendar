@@ -357,7 +357,7 @@
  				if (jm==12 && jd<25) {
  					green = true;
  				}
- 				 				if (row==1 && col<w) { 					result += "<td style='color:white'>00</td>"; 				} else if (d>=tot) { 					result += "<td style='color:white'>00</td>"; 				} else { 					 					if (d==day && m==month && y==year) {						result += "<td style='border:3px solid red;"; 					} else { 						result += "<td style='"; 					} 					
+ 				 				if (row==1 && col<w) { 					result += "<td style='color:white'>00</td>"; 				} else if (d>tot) { 					result += "<td style='color:white'>00</td>"; 				} else { 					 					if (d==day && m==month && y==year) {						result += "<td style='border:3px solid red;"; 					} else { 						result += "<td style='"; 					} 					
  					
  					if (green) {
  						result += "background-color:rgb(100, 255, 100);";
