@@ -11,13 +11,17 @@
 		vertical-align: top;
 	}
 	table.month {		border-collapse: collapse;
-		display: inline-block;			}		table.month tr:nth-child(1) td {		background-color: red;	}		table.month tr:nth-child(2) td {		background-color: rgb(200,200,200);	}		table.month td  {		border: 1px solid black;		padding: 0px;		text-align: center;
+		display: inline-block;			}		table.month tr:nth-child(1) td {		background-color: red;
+	}		table.month tr:nth-child(2) td {		background-color: rgb(200,200,200);	}		table.month td  {		border: 1px solid black;
+		border-collapse: collapse;		padding: 0px;		text-align: center;
 		width: 0pt;
-		height: 0pt;	}
+		height: 18pt;
+	}
 	
 	button.btn3 {
 		text-align: center;
 		width:30pt;
+		height:18pt;
 		border-top-width: 0pt;
 		border-bottom-width: 0pt;
 		border-left-width: 0pt;
@@ -41,7 +45,7 @@
 	<table style="width=100%;">
 		<tr valign="top">
 			<td>
-				<table class="month" id="prev">					<tr>						<td colspan="7" class="month" id="prevTitle" valign="top"></td>					</tr>					<tr>						<td class="weekday">Пон</td>						<td class="weekday">Уто</td>						<td class="weekday">Сре</td>						<td class="weekday">Чет</td>						<td class="weekday">Пет</td>						<td class="weekday">Суб</td>						<td class="weekday">Нед</td>					</tr>					<tr><th></th></tr>					<tr id="prev1"></tr>					<tr id="prev2"></tr>					<tr id="prev3"></tr>					<tr id="prev4"></tr>					<tr id="prev5"></tr>					<tr id="prev6"></tr>					<tr id="prev7"></tr>				</table>
+				<table class="month" id="prev">					<tr>						<td colspan="7" class="month" id="prevTitle"></td>					</tr>					<tr>						<td class="weekday">Пон</td>						<td class="weekday">Уто</td>						<td class="weekday">Сре</td>						<td class="weekday">Чет</td>						<td class="weekday">Пет</td>						<td class="weekday">Суб</td>						<td class="weekday">Нед</td>					</tr>					<tr><th></th></tr>					<tr id="prev1"></tr>					<tr id="prev2"></tr>					<tr id="prev3"></tr>					<tr id="prev4"></tr>					<tr id="prev5"></tr>					<tr id="prev6"></tr>					<tr id="prev7"></tr>				</table>
 			</td>
 			<td>				<table class="month" id="curr">					<tr>						<td colspan="7" class="month" id="currTitle"></td>					</tr>					<tr>						<td class="weekday">Пон</td>						<td class="weekday">Уто</td>						<td class="weekday">Сре</td>						<td class="weekday">Чет</td>						<td class="weekday">Пет</td>						<td class="weekday">Суб</td>						<td class="weekday">Нед</td>					</tr>					<tr><th></th></tr>					<tr id="curr1"></tr>					<tr id="curr2"></tr>					<tr id="curr3"></tr>					<tr id="curr4"></tr>					<tr id="curr5"></tr>					<tr id="curr6"></tr>					<tr id="curr7"></tr>				</table>
 			</td>
