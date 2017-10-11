@@ -252,7 +252,7 @@
  		var holidays = getHolidays(date-7, date+7); 		var jdn; 		var tableHtml = ""; 		 		for (i=-7; i<=7; ++i) { 			var jdn = date+i; 			var d = jdnToGregorian(jdn); 			var w = dayOfWeek(jdn+1); 			var a; 			var g = jdnToGregorian(jdn);
  			
  			if (i==-7 || d.day==1) {
- 				tableHtml += "<tr><td style='border:1pt solid black;background-color:rgb(200,200,200);text-align:center;' colspan='3'>"+monthName(d.month+1)+"</td></tr>\n";
+ 				tableHtml += "<tr><td style='border:1pt solid black;background-color:rgb(200,200,200);text-align:center;' colspan='3'>"+monthName(d.month)+"</td></tr>\n";
  			} 			if (jdn in holidays) { 				a = holidays[jdn]; 			} else { 				a = []; 			} 			if (w>7) { 				w -= 7; 			} 		 			var j; 			 			tableHtml += "<tr>\n" 			tableHtml += "\t<td style='border:1pt solid black;"; 			 			if (w==0) { 				tableHtml += "color:red;"; 			} else { 				tableHtml += "color:black;"; 			} 			 			tableHtml += "background-color:rgb(200,200,200);"; 			 			tableHtml += "'"; 			 			 			if (a.length>1) { 				tableHtml += " rowspan='"+(a.length)+"'"; 			} 			 			tableHtml += ">\n"; 			tableHtml += "\t\t"+dayOfWeekNames[w]+"\n"; 			tableHtml += "\t</td>\n"; 			tableHtml += "\t<td style='border:1pt solid black;"; 			 			tableHtml += "'"; 						if (a.length>1) { 				tableHtml += " rowspan='"+(a.length)+"'"; 			} 			 			tableHtml += ">\n"; 			 			tableHtml += "\t\t"+d.day+"\n"; 			tableHtml += "\t</td>\n"; 			 			var j; 			 			for (j=0; j<a.length; ++j) { 				var h = a[j];
  				var st = split(h.description);
  				
