@@ -392,7 +392,7 @@
  		var greens = getGreens(date-7, date+7); 		var jdn; 		var tableHtml = ""; 		 		for (i=-7; i<=7; ++i) { 			var jdn = date+i; 			var w = dayOfWeek(jdn+1); 			var a; 			var g = jdnToGregorian(jdn);
  			
  			if (i==-7 || g.day==1) {
- 				tableHtml += "<tr><td style='border:1pt solid black;background-color:rgb(200,200,200);text-align:center;' colspan='3'>"+monthName(d.month)+"</td></tr>\n";
+ 				tableHtml += "<tr><td style='border:1pt solid black;background-color:rgb(200,200,200);text-align:center;' colspan='3'>"+monthName(g.month)+"</td></tr>\n";
  			} 			if (jdn in holidays) { 				a = holidays[jdn]; 			} else { 				a = []; 			} 			if (w>7) { 				w -= 7; 			} 		 			var j; 			 			tableHtml += "<tr>\n" 			tableHtml += "\t<td style='text-align:center;border:1pt solid black;"; 			 			if (w==0) { 				tableHtml += "color:red;"; 			} else { 				tableHtml += "color:black;"; 			}
  			 			tableHtml += "background-color:rgb(200,200,200)'"; 			 			 			if (a.length>1) { 				tableHtml += " rowspan='"+(a.length)+"'"; 			} 			
  			tableHtml += " onclick='onCurrentDateChanged("+g.year+", "+g.month+", "+g.day+")'"; 			tableHtml += ">\n"; 			tableHtml += "\t\t&nbsp;"+dayOfWeekNames[w]+"&nbsp;\n"; 			tableHtml += "\t</td>\n"; 			tableHtml += "\t<td style='text-align:center;border:1pt solid black;"; 			 			tableHtml += "";
