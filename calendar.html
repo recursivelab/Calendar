@@ -323,12 +323,12 @@
  			if (jdn>easter-49 && jdn<easter) {
  				green = true;
 	 		}
+	 		
+	 		if (jdn>easter+49 && jdn<=easter+56) {
+	 			green = false;
+	 		}
  				
- 			if (jm==5 && jd>=30) {
- 				green = true;
- 			}
- 				
- 			if (jm==6 && jd<29) {
+ 			if (jdn>easter+56 && (jm<=5 || (jm==6 && jd<29))) {
  				green = true;
  			}
  				
