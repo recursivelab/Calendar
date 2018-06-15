@@ -397,6 +397,10 @@
  			 			tableHtml += "background-color:rgb(200,200,200)'"; 			 			 			if (a.length>1) { 				tableHtml += " rowspan='"+(a.length)+"'"; 			} 			
  			tableHtml += " onclick='onCurrentDateChanged("+g.year+", "+g.month+", "+g.day+")'"; 			tableHtml += ">\n"; 			tableHtml += "\t\t&nbsp;"+dayOfWeekNames[w]+"&nbsp;\n"; 			tableHtml += "\t</td>\n"; 			tableHtml += "\t<td style='text-align:center;border:1pt solid black;"; 			 			tableHtml += "";
 
+			if (w==0) {
+				tableHtml += "color:red;";
+			}
+			
  			if (greens.has(jdn)) {
  				tableHtml += "background-color:rgb(100, 255, 100);";
  			}
@@ -462,6 +466,10 @@
 	 				result +="<td>";
  					
  					if (cd==gd && cm==gm && cy==gy) {						result += "<button type='button' class='btn3'  style='border:3px solid red;"; 					} else { 						result += "<button type='button' class='btn3' style='"; 					}
+ 					
+ 					if (col==7) {
+ 						result += "color:red;";
+ 					}
  					
  					if (greens.has(jdn)) {
  						result += "background-color:rgb(100, 255, 100);";
